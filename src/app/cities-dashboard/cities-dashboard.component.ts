@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
+import { ICity } from "./model/city";
 
-export interface City {
-    id: number;
-    name: string;
-    imageLink: string;
-}
-
-const ELEMENT_DATA: City[] = [
+const ELEMENT_DATA: ICity[] = [
     {id: 1, name: 'Hydrogen', imageLink: '1.0079'},
     {id: 2, name: 'Helium', imageLink: '4.0026'},
     {id: 3, name: 'Lithium', imageLink: '6.941'},
