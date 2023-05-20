@@ -1,23 +1,22 @@
 import { Component } from '@angular/core';
 
 export interface City {
+    id: number;
     name: string;
-    position: number;
-    weight: number;
-    symbol: string;
+    imageLink: string;
 }
 
 const ELEMENT_DATA: City[] = [
-    {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-    {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-    {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-    {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-    {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-    {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+    {id: 1, name: 'Hydrogen', imageLink: '1.0079'},
+    {id: 2, name: 'Helium', imageLink: '4.0026'},
+    {id: 3, name: 'Lithium', imageLink: '6.941'},
+    {id: 4, name: 'Beryllium', imageLink: '9.0122'},
+    {id: 5, name: 'Boron', imageLink: '10.811'},
+    {id: 6, name: 'Carbon', imageLink: '12.0107'},
+    {id: 7, name: 'Nitrogen', imageLink: '14.0067'},
+    {id: 8, name: 'Oxygen', imageLink: '15.9994'},
+    {id: 9, name: 'Fluorine', imageLink: '18.9984'},
+    {id: 10, name: 'Neon', imageLink: '20.1797'},
 ];
 
 @Component({
@@ -26,6 +25,6 @@ const ELEMENT_DATA: City[] = [
     styleUrls: ['./cities-dashboard.component.css']
 })
 export class CitiesDashboardComponent {
-    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+    displayedColumns: string[] = ['id', 'name', 'imageLink'];
     dataSource = ELEMENT_DATA;
 }
