@@ -1,5 +1,5 @@
-export interface ICity {
+export interface City {
     id: number;
     name: string;
-    imageLink: string;
+    image: string;
 }

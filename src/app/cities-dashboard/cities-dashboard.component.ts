@@ -7,7 +7,7 @@ import { CityService } from "./city.service";
     styleUrls: ['./cities-dashboard.component.css']
 })
 export class CitiesDashboardComponent {
-    displayedColumns: string[] = ['id', 'name', 'imageLink'];
+    displayedColumns: string[] = ['id', 'name', 'image'];
     dataSource: any;
 
     constructor(private cityService: CityService) {
