@@ -1,4 +1,4 @@
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8" xmlns="http://www.w3.org/1999/html">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
         <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
@@ -13,8 +13,10 @@
 
     <!-- Image Column -->
     <ng-container matColumnDef="imageLink">
-        <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.imageLink}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> ImageLink </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+        <img [src]="element.imageLink" alt="{{element.name}}" width="300">
+        </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
