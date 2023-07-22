@@ -15,12 +15,7 @@ export class CitiesDashboardComponent {
 
     ngOnInit(): void {
         this.cityService.fetchCities().subscribe(
-            data => {
-                this.dataSource = data
-            },
-            error => {
-                console.error(error)
-            }
+            data => {this.dataSource = data}
         )
     }
 }
